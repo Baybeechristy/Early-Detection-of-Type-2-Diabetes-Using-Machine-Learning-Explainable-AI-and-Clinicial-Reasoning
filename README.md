@@ -8,7 +8,7 @@
 ![LIME](https://img.shields.io/badge/LIME-Explainability-yellow)
 ![License](https://img.shields.io/badge/License-Educational-lightgrey)
 
-> **An end-to-end ML screening pipeline that detects Type 2 Diabetes using only 5 non-invasive measurements — no blood test required.**
+> **An end-to-end ML screening pipeline that detects Type 2 Diabetes using only 5 non-invasive measurements no blood test required.**
 
 ### 🔗 [Launch the Live Dashboard](https://2aaad6bepdxuhswjdxz9b5.streamlit.app)
 
@@ -18,7 +18,7 @@
 
 - **537 million** adults worldwide have diabetes (IDF, 2021)
 - **1 in 3** are diagnosed late, after complications have already developed
-- Existing ML studies use lab values (HbA1c, glucose) as features — **but these are the diagnosis itself**, making prediction circular
+- Existing ML studies use lab values (HbA1c, glucose) as features  **but these are the diagnosis itself**, making prediction circular
 - No reviewed study combines calibration, dual explainability, robustness validation AND clinical safety checks in one pipeline
 
 ## 💡 The Solution
@@ -44,11 +44,11 @@ Using only **age, sex, BMI, systolic BP and diastolic BP**, this system screens 
 
 ### 🔬 The Calibration Surprise
 
-Post-hoc calibration (Platt Scaling, Isotonic Regression) **made things worse**, not better. The shallow XGBoost (depth=3, lr=0.01) was already naturally well-calibrated. This is a finding worth publishing — most studies assume calibration always helps.
+Post-hoc calibration (Platt Scaling, Isotonic Regression) **made things worse**, not better. The shallow XGBoost (depth=3, lr=0.01) was already naturally well-calibrated. This is a finding worth publishing, most studies assume calibration always helps.
 
 ### 🚨 The Threshold Discovery
 
-At the default threshold of 0.50, the model catches **zero** diabetic patients. Sensitivity = 0.000. Every single diabetic patient is missed. This is not a bug — it's what happens when 15.5% prevalence pushes all probabilities below 0.50.
+At the default threshold of 0.50, the model catches **zero** diabetic patients. Sensitivity = 0.000. Every single diabetic patient is missed. This is not a bug it's what happens when 15.5% prevalence pushes all probabilities below 0.50.
 
 ---
 
@@ -117,8 +117,8 @@ NHANES 2015-2018 Data (10,168 adults)
 | 🔍 **Screening** | Enter patient measurements → risk score + SHAP explanation + clinical rule check |
 | 📈 **Model Results** | 5-model comparison, ROC curves, confusion matrices |
 | 📐 **Calibration** | Brier score, ECE, calibration curves — proof that probabilities are trustworthy |
-| 🎯 **Threshold** | 8 thresholds analysed — see exactly why 0.50 fails and 0.15 works |
-| 🔁 **Robustness** | 10-seed validation — proof results aren't a fluke |
+| 🎯 **Threshold** | 8 thresholds analysed to see exactly why 0.50 fails and 0.15 works |
+| 🔁 **Robustness** | 10-seed validation to proof results aren't a fluke |
 | 🧠 **Explainability** | Global SHAP + individual SHAP/LIME side-by-side for any patient |
 | 🚨 **Clinical Rules** | 4 real NHANES case studies + interactive contradiction checker |
 
@@ -215,7 +215,7 @@ streamlit run app.py
 ## 👤 Author
 
 **Irene Christabel Ogbomo**
-BSc Computing — Nottingham Trent University (2025/26)
+BSc Computer Science — Nottingham Trent University (2025/26)
 Supervised by Owa Kayode
 
 📧 Contact: [via GitHub](https://github.com/Baybeechristy)
